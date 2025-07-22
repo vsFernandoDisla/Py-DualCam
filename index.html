@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Últimos frames de cámaras</title>
+</head>
+
+<body>
+    <h1>Últimos frames</h1>
+    <div id="frames"></div>
+    <script>
+        fetch("http://127.0.0.1:8000/latest_frames")
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById("frames");
+
+                for (const [camName, base64Image] of Object.entries(data)) {
+                    const title = document.createElement("h2");
+                    title.textContent = `Cámara: ${camName}`;
+                    container.appendChild(title);
+
+                    const img = document.createElement("img");
+                    img.src = base64Image;
+                    img.style.width = "400px";
+                    img.style.margin = "10px";
+                    container.appendChild(img);
+                }
+            })
+            .catch(err => {
+                document.getElementById("frames").textContent = "Error cargando frames: " + err;
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Editor / IDE configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# MacOS / Linux / Windows hidden files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and temp files
+*.log
+*.bak
+*.swp
+*.tmp
+
+# Test and coverage
+.coverage
+coverage.xml
+htmlcov/
+.cache/
+.pytest_cache/
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# MyPy / Pylint / other tooling
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# SQLite / DB files
+*.sqlite3
+*.db
+
+# Environment variable files
+.env
+.env.*
+
+# FastAPI/Starlette static files (optional)
+static/
+uploads/
+
+# VS Code settings (optional)
+.vscode/
+
+# Ignore video/image/cache buffers if your app generates them
+temp/
+video-buffer/
+*.mp4
+*.jpg
+*.jpeg
+*.png
