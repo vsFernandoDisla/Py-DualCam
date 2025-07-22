@@ -224,7 +224,7 @@ async def lifespan(app: FastAPI):
         logger.info("Iniciando cámaras...")
         # Initialize camera buffers with their respective indices
         cam1_instance = CameraBuffer(0)
-        cam2_instance = CameraBuffer(1) # Assuming camera 1 is available
+        cam2_instance = CameraBuffer(2) # Assuming camera 1 is available
 
         camera_buffers["cam1"] = cam1_instance
         camera_buffers["cam2"] = cam2_instance
